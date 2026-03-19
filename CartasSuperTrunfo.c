@@ -91,10 +91,10 @@ int main() {
   printf("Qual o pib: \n");
   scanf("%f", &pib2);
 
-  printf("Quantos pontos turísticosA: \n");
+  printf("Quantos pontos turísticos: \n");
   scanf("%d", &pontos2);
 
-  //Calcular a Densidade Populacional carta 1
+  //Calcular a Densidade Populacional carta 2
 
   densidade2 = (float) populacao2 / area2;
   percapita2 = (float) pib2 / populacao2;
