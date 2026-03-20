@@ -77,7 +77,6 @@ int main() {
   printf("Super Poder carta 1: %.2f Power\n", superPoder);
   
 
-
   // Área para entrada de dados carta 2
 
   printf("Carta n° 2 \n");
@@ -137,4 +136,5 @@ int main() {
 
 
 return 0;
+
 } 
