@@ -8,51 +8,20 @@ int main() {
 
   // Área de definição das variáveis para armazenar as propriedades da cidade 1
 
-  char estado[20];
-  char codigo[20];
-  char cidade[20];
-  unsigned long int populacao;
-  float area, densidade;
-  float pib, percapita;
-  int pontos;
+  int populacao = 12300000;
+  float area =  1521.11, densidade;
+  float pib = 699.28, percapita;
+  int pontos = 50;
   float superPoder;
 
   // Área de definição das variáveis para armazenar as propriedades da cidade 2
 
-  char estado2[20];
-  char codigo2[20];
-  char cidade2[20];
-  unsigned long int populacao2;
-  float area2, densidade2;
-  float pib2, percapita2;
-  int pontos2;
+  int populacao2 = 6700000;
+  float area2 = 1200.25, densidade2;
+  float pib2 = 300.50, percapita2;
+  int pontos2 = 30;
   float superPoder2;
   
-  
-  // Área para entrada de dados carta 1
-
-  printf("Carta n° 1 \n");
-
-  printf("Digite o estado: \n");
-  scanf("%s", estado);
-
-  printf("Digite o código: \n");
-  scanf("%s", codigo);
-
-  printf("Digite qual a cidade: \n");
-  scanf("%s", cidade);
-
-  printf("Qual a população: \n");
-  scanf("%lu", &populacao);
-
-  printf("Qual a área: \n");
-  scanf("%f", &area);
-
-  printf("Qual o pib: \n");
-  scanf("%f", &pib);
-
-  printf("Quantos pontos turísticos: \n");
-  scanf("%d", &pontos);
 
   //Calcular a Densidade Populacional carta 1
 
@@ -65,10 +34,10 @@ int main() {
 
   // Área para exibição dos dados da cidade carta 1
 
-  printf("Estado: %s\n", estado);
-  printf("Código: %s\n", codigo);
-  printf("Cidade: %s\n", cidade);
-  printf("População: %lu\n", populacao);
+  printf("Estado: SP\n");
+  printf("Código: A01\n");
+  printf("Cidade: Sao Paulo\n");
+  printf("População: %d\n", populacao);
   printf("Área: %.2f km\n", area);
   printf("Pib: %.2f Bilhões de reais\n", pib);
   printf("Pontos turísticos: %d\n", pontos);
@@ -76,31 +45,6 @@ int main() {
   printf("Pib per capita: %.2f Reais\n", percapita);
   printf("Super Poder carta 1: %.2f Power\n", superPoder);
   
-
-  // Área para entrada de dados carta 2
-
-  printf("Carta n° 2 \n");
-
-  printf("Digite o estado: \n");
-  scanf("%s", estado2);
-
-  printf("Digite o código: \n");
-  scanf("%s", codigo2);
-
-  printf("Digite qual a cidade: \n");
-  scanf("%s", cidade2);
-
-  printf("Qual a população: \n");
-  scanf("%lu", &populacao2);
-
-  printf("Qual a área: \n");
-  scanf("%f", &area2);
-
-  printf("Qual o pib: \n");
-  scanf("%f", &pib2);
-
-  printf("Quantos pontos turísticos: \n");
-  scanf("%d", &pontos2);
 
   //Calcular a Densidade Populacional carta 2
 
@@ -113,10 +57,10 @@ int main() {
 
   // Área para exibição dos dados da cidade carta 2
 
-  printf("Estado: %s\n", estado2);
-  printf("Código: %s\n", codigo2);
-  printf("Cidade: %s\n", cidade2);
-  printf("População: %lu\n", populacao2);
+  printf("Estado: RJ\n");
+  printf("Código: B01\n");
+  printf("Cidade: Rio de Janeiro\n");
+  printf("População: %d\n", populacao2);
   printf("Área: %.2f km\n", area2);
   printf("Pib: %.2f Bilhões de reais\n", pib2);
   printf("Pontos turísticos: %d\n", pontos2);
@@ -134,7 +78,59 @@ int main() {
   printf("Pib per capita: Carta 1 venceu (%d)\n", percapita > percapita2);
   printf("Super Poder: Carta 1 venceu (%d)\n", superPoder > superPoder2);
 
+  // Área para comparação das cartas (if/else)
 
+  if (populacao > populacao2)
+  {
+    printf("Carta 1 - São Paulo (SP): %d\n", populacao);
+  }else {
+    printf("Carta 2 - Rio de Janeiro (RJ): %d\n", populacao2);
+  }
+
+  if (area > area2)
+  {
+    printf("Carta 1 - São Paulo (SP): %.2f\n", area);
+  }else {
+    printf("Carta 2 - Rio de Janeiro (RJ): %.2f\n", area2);
+  }
+
+  if (pib > pib2)
+  {
+    printf("Carta 1 - São Paulo (SP): %.2f\n", pib);
+  }else {
+    printf("Carta 2 - Rio de Janeiro (RJ): %.2f\n", pib2);
+  }
+
+  if (pontos > pontos2)
+  {
+    printf("Carta 1 - São Paulo (SP):%d\n", pontos);
+  }else {
+    printf("Carta 2 - Rio de Janeiro (RJ): %d\n", pontos2);
+  }
+
+  if (densidade < densidade2)
+  {
+    printf("Carta 1 - São Paulo (SP): %.2f\n", densidade);
+  }else {
+    printf("Carta 2 - Rio de Janeiro (RJ): %.2f\n", densidade2);
+  }
+
+  if (percapita > percapita2)
+  {
+    printf("Carta 1 - São Paulo (SP): %.6f\n", percapita);
+  }else {
+    printf("Carta 2 - Rio de Janeiro (RJ): %.6f\n", percapita2);
+  }
+
+    if (superPoder > superPoder2)
+  {
+    printf("Resultado: Carta 1 - São Paulo (SP) venceu! %.2f\n", superPoder);
+  }else {
+    printf("Resultado: Carta 2 - Rio de Janeiro (RJ) venceu! %.2f\n", superPoder2);
+  }
+
+
+  
 return 0;
 
 } 
